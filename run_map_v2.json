@@ -1,0 +1,81 @@
+{
+  "groups": [
+    {
+      "label": "Rule",
+      "repeat_axis": "规则一次",
+      "runs": [
+        "runs/test_rule"
+      ]
+    },
+    {
+      "label": "Uniform random",
+      "repeat_axis": "随机策略种子20次",
+      "runs": [
+        "runs/test_random_seed00",
+        "runs/test_random_seed01",
+        "runs/test_random_seed02",
+        "runs/test_random_seed03",
+        "runs/test_random_seed04",
+        "runs/test_random_seed05",
+        "runs/test_random_seed06",
+        "runs/test_random_seed07",
+        "runs/test_random_seed08",
+        "runs/test_random_seed09",
+        "runs/test_random_seed10",
+        "runs/test_random_seed11",
+        "runs/test_random_seed12",
+        "runs/test_random_seed13",
+        "runs/test_random_seed14",
+        "runs/test_random_seed15",
+        "runs/test_random_seed16",
+        "runs/test_random_seed17",
+        "runs/test_random_seed18",
+        "runs/test_random_seed19"
+      ]
+    },
+    {
+      "label": "Base LM",
+      "repeat_axis": "未微调一次",
+      "runs": [
+        "runs/test_raw_base"
+      ]
+    },
+    {
+      "label": "LoRA, raw",
+      "repeat_axis": "独立训练种子3次",
+      "runs": [
+        "runs/test_raw_seed7_step240",
+        "runs/test_raw_seed11_step240",
+        "runs/test_raw_seed19_step240"
+      ]
+    },
+    {
+      "label": "Base, no gates",
+      "repeat_axis": "去门槛消融一次",
+      "runs": [
+        "runs/test_raw_base_nogates"
+      ]
+    },
+    {
+      "label": "LoRA, no gates",
+      "repeat_axis": "验证选定seed19消融一次",
+      "runs": [
+        "runs/test_raw_seed19_step240_nogates"
+      ]
+    },
+    {
+      "label": "Base, facts",
+      "repeat_axis": "表示支线一次",
+      "runs": [
+        "runs/test_facts_base"
+      ]
+    },
+    {
+      "label": "LoRA, facts",
+      "repeat_axis": "表示支线训练种子1次",
+      "runs": [
+        "runs/test_facts_seed7_step240"
+      ]
+    }
+  ]
+}

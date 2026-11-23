@@ -1,0 +1,99 @@
+{
+  "locked_at_utc": "2026-11-19T06:19:28.343626+00:00",
+  "test_sha256": "5464a154cfbabdd8c42b0c57d46f12d0727ab4b29804041ca15c1e639d9a5eeb",
+  "test_cases": 64,
+  "recipe_groups": 32,
+  "known_cases": 56,
+  "unknown_cases": 8,
+  "normal_cases": 8,
+  "compound_cases": 16,
+  "raw_selected_steps": {
+    "7": 240,
+    "11": 240,
+    "19": 240
+  },
+  "facts_selected_step": 240,
+  "neural_runs": [
+    {
+      "name": "test_raw_base",
+      "entry": "agent_v2.py",
+      "policy": "lm",
+      "gates": "standard",
+      "adapter": null
+    },
+    {
+      "name": "test_raw_seed7_step240",
+      "entry": "agent_v2.py",
+      "policy": "lm",
+      "gates": "standard",
+      "adapter": "models/seed7/step_240"
+    },
+    {
+      "name": "test_raw_seed11_step240",
+      "entry": "agent_v2.py",
+      "policy": "lm",
+      "gates": "standard",
+      "adapter": "models/seed11/step_240"
+    },
+    {
+      "name": "test_raw_seed19_step240",
+      "entry": "agent_v2.py",
+      "policy": "lm",
+      "gates": "standard",
+      "adapter": "models/seed19/step_240"
+    },
+    {
+      "name": "test_raw_base_nogates",
+      "entry": "agent_v2.py",
+      "policy": "lm",
+      "gates": "none",
+      "adapter": null
+    },
+    {
+      "name": "test_raw_seed19_step240_nogates",
+      "entry": "agent_v2.py",
+      "policy": "lm",
+      "gates": "none",
+      "adapter": "models/seed19/step_240"
+    },
+    {
+      "name": "test_facts_base",
+      "entry": "agent_facts_v2.py",
+      "gates": "standard",
+      "adapter": null
+    },
+    {
+      "name": "test_facts_seed7_step240",
+      "entry": "agent_facts_v2.py",
+      "gates": "standard",
+      "adapter": "models/facts_seed7/step_240"
+    }
+  ],
+  "non_neural_runs": {
+    "rule": "test_rule",
+    "random": [
+      "test_random_seed00",
+      "test_random_seed01",
+      "test_random_seed02",
+      "test_random_seed03",
+      "test_random_seed04",
+      "test_random_seed05",
+      "test_random_seed06",
+      "test_random_seed07",
+      "test_random_seed08",
+      "test_random_seed09",
+      "test_random_seed10",
+      "test_random_seed11",
+      "test_random_seed12",
+      "test_random_seed13",
+      "test_random_seed14",
+      "test_random_seed15",
+      "test_random_seed16",
+      "test_random_seed17",
+      "test_random_seed18",
+      "test_random_seed19"
+    ]
+  },
+  "selection": "Validation only. Raw3seed main, facts single-seed representation side branch. Head-only/1.5B not selected for final test.",
+  "post_test_rule": "No modification of method, representation, labels or checkpoint after test inference."
+}
